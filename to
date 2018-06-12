@@ -1,0 +1,108 @@
+Script started on Fri 01 Jun 2018 09:58:55 AM UTC
+]0;vagrant@localhost:/home/vagrant[?1034h[root@www vagrant]# su
+]0;vagrant@localhost:/home/vagrant[?1034h[root@www vagrant]# su -
+Last login: Fri Jun  1 09:58:58 UTC 2018 on pts/2
+]0;root@www:~[?1034h[root@www ~]# free -h
+              total        used        free      shared  buff/cache   available
+Mem:           992M         97M        512M        6.6M        382M        722M
+Swap:          2.0G          0B        2.0G
+]0;root@www:~[root@www ~]# free -h | head -2
+              total        used        free      shared  buff/cache   available
+Mem:           992M         97M        512M        6.6M        382M        722M
+]0;root@www:~[root@www ~]# du
+32	.
+]0;root@www:~[root@www ~]# df
+Filesystem              1K-blocks    Used Available Use% Mounted on
+/dev/mapper/centos-root  42954248 1128684  41825564   3% /
+devtmpfs                   497424       0    497424   0% /dev
+tmpfs                      508076       0    508076   0% /dev/shm
+tmpfs                      508076    6736    501340   2% /run
+tmpfs                      508076       0    508076   0% /sys/fs/cgroup
+/dev/sda1                 1038336  156236    882100  16% /boot
+/dev/mapper/centos-home  20969468   33208  20936260   1% /home
+vagrant                  66559996  985780  65574216   2% /vagrant
+tmpfs                      101616       0    101616   0% /run/user/1000
+]0;root@www:~[root@www ~]# df /j[Khome
+Filesystem              1K-blocks  Used Available Use% Mounted on
+/dev/mapper/centos-home  20969468 33208  20936260   1% /home
+]0;root@www:~[root@www ~]# ping
+Usage: ping [-aAbBdDfhLnOqrRUvV64] [-c count] [-i interval] [-I interface]
+            [-m mark] [-M pmtudisc_option] [-l preload] [-p pattern] [-Q tos]
+            [-s packetsize] [-S sndbuf] [-t ttl] [-T timestamp_option]
+            [-w deadline] [-W timeout] [hop1 ...] destination
+Usage: ping -6 [-aAbBdDfhLnOqrRUvV] [-c count] [-i interval] [-I interface]
+             [-l preload] [-m mark] [-M pmtudisc_option]
+             [-N nodeinfo_option] [-p pattern] [-Q tclass] [-s packetsize]
+             [-S sndbuf] [-t ttl] [-T timestamp_option] [-w deadline]
+             [-W timeout] destination
+]0;root@www:~[root@www ~]# mpstat
+-bash: mpstat: command not found
+]0;root@www:~[root@www ~]# mestat
+-bash: mestat: command not found
+]0;root@www:~[root@www ~]# mpstat
+-bash: mpstat: command not found
+]0;root@www:~[root@www ~]# mp[K[KMpstst[K[Kat
+-bash: Mpstat: command not found
+]0;root@www:~[root@www ~]# uptime
+ 11:02:17 up 13:56,  3 users,  load average: 0.00, 0.01, 0.05
+]0;root@www:~[root@www ~]# uptime 
+ 11:02:56 up 13:56,  3 users,  load average: 0.00, 0.01, 0.05
+]0;root@www:~[root@www ~]# \[Kuptime | head -2
+ 11:03:03 up 13:56,  3 users,  load average: 0.00, 0.01, 0.05
+]0;root@www:~[root@www ~]# ./cpu.sh
+-bash: ./cpu.sh: No such file or directory
+]0;root@www:~[root@www ~]# cd /vagrant
+]0;root@www:/vagrant[root@www vagrant]# ls
+[0m[34;42mbin[0m  [01;32mcloudnetwork_monitor.sh[0m  [34;42membedded[0m  [01;32mtext.txt[0m  [01;32mVagrantfile[0m
+]0;root@www:/vagrant[root@www vagrant]# cd
+]0;root@www:~[root@www ~]# yum install httpd
+Loaded plugins: fastestmirror
+base                                                     | 3.6 kB     00:00     
+extras                                                   | 3.4 kB     00:00     
+updates                                                  | 3.4 kB     00:00     
+Loading mirror speeds from cached hostfile
+ * base: centos.excellmedia.net
+ * extras: centos.excellmedia.net
+ * updates: centos.excellmedia.net
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-80.el7.centos will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package       Arch           Version                        Repository    Size
+================================================================================
+Installing:
+ httpd         x86_64         2.4.6-80.el7.centos            base         2.7 M
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 2.7 M
+Installed size: 9.4 M
+Is this ok [y/d/N]: y
+Downloading packages:
+httpd-2.4.6-80.el7.centos. 13% [==              ]  0.0 B/s | 379 kB   --:-- ETA httpd-2.4.6-80.el7.centos. 42% [======-         ] 1.0 MB/s | 1.2 MB   00:01 ETA httpd-2.4.6-80.el7.centos. 55% [========-       ] 1.0 MB/s | 1.5 MB   00:01 ETA httpd-2.4.6-80.el7.centos. 85% [=============-  ] 1.1 MB/s | 2.3 MB   00:00 ETA httpd-2.4.6-80.el7.centos.x86_64.rpm                       | 2.7 MB   00:01     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : httpd-2.4.6-80.el7.centos.x8 [                             ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [#                            ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [##                           ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [###                          ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [####                         ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [#####                        ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [######                       ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [#######                      ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [########                     ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [#########                    ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [##########                   ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [###########                  ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [############                 ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [#############                ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [##############               ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [###############              ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [################             ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [#################            ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [##################           ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [###################          ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [####################         ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [#####################        ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [######################       ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [#######################      ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [########################     ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [#########################    ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [##########################   ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [###########################  ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x8 [############################ ] 1/1  Installing : httpd-2.4.6-80.el7.centos.x86_64                             1/1 
+  Verifying  : httpd-2.4.6-80.el7.centos.x86_64                             1/1 
+
+Installed:
+  httpd.x86_64 0:2.4.6-80.el7.centos                                            
+
+Complete!
+]0;root@www:~[root@www ~]# systemctl
+[?1h=  UNIT                       LOAD   ACTIVE SUB       DESCRIPTION[m
+  proc-sys-fs-binfmt_misc.automount loaded active waiting   Arbitrary Executable[m
+  sys-devices-pci0000:00-0000:00:03.0-net-enp0s3.device loaded active plugged   [m
+  sys-devices-pci0000:00-0000:00:05.0-sound-card0.device loaded active plugged  [m
+  sys-devices-pci0000:00-0000:00:0d.0-ata3-host2-target2:0:0-2:0:0:0-block-sda-s[m
+  sys-devices-pci0000:00-0000:00:0d.0-ata3-host2-target2:0:0-2:0:0:0-block-sda-s[m
+  sys-devices-pci0000:00-0000:00:0d.0-ata3-host2-target2:0:0-2:0:0:0-block-sda.d[m
+  sys-device
